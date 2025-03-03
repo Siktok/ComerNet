@@ -10,7 +10,7 @@ Este proyecto es una aplicación web construida con **.NET**. con un patrón de 
 
 Implementa características como:
 
-- Framework principal: Net. 8.
+- Framework principal: .Net 8.
 - Principios Solid.
 - API RESTful.
 - Patrón de diseño DDD (domain-driven design)
