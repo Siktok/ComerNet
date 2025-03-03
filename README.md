@@ -11,7 +11,7 @@ Este proyecto es una aplicación web construida con **.NET**. con un patrón de 
 Implementa características como:
 
 - Framework principal: Net. 8.
-- Princicpios Solid.
+- Principios Solid.
 - API RESTful.
 - Patrón de diseño DDD (domain-driven design)
 - Documentación de la API: Swagger.
