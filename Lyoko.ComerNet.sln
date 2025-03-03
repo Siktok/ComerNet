@@ -1,0 +1,119 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35728.132
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lyoko.ComerNet.Transversal.Common", "Lyoko.ComerNet.Transversal.Common\Lyoko.ComerNet.Transversal.Common.csproj", "{97EFA5C3-67FF-40A2-8D56-3C293896C135}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Transversal", "Transversal", "{4656032F-FB67-45DD-85D5-C9136339F330}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infraestructura", "Infraestructura", "{6B4F73E6-1801-421F-9EBE-C9BE1B7A48FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dominio", "Dominio", "{29F31DB8-9AAB-4B4A-983F-65B75345E9DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Servicio", "Servicio", "{5B9BB56E-94CC-4672-97E2-E2B3E019D656}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aplicacion", "Aplicacion", "{11C3E5A5-8455-46C9-8A9F-C293B9F18D1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lyoko.ComerNet.Infrastructure.Data", "Lyoko.ComerNet.Infrastructure.Data\Lyoko.ComerNet.Infrastructure.Data.csproj", "{20AB50FE-9252-41DF-BC72-ADD706C3D51A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lyoko.ComerNet.Infrastructure.Interface", "Lyoko.ComerNet.Infrastructure.Interface\Lyoko.ComerNet.Infrastructure.Interface.csproj", "{EB8E73D5-10F6-4C70-9ED1-6DECBBAB78DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lyoko.ComerNet.Domain.Entity", "Lyoko.ComerNet.Domain.Entity\Lyoko.ComerNet.Domain.Entity.csproj", "{DAFBCB12-06F9-437F-8F00-0C858E3BBB5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lyoko.ComerNet.Infrastructure.Repository", "Lyoko.ComerNet.Infrastructure.Repository\Lyoko.ComerNet.Infrastructure.Repository.csproj", "{2FD04973-A1CD-4DC9-8393-2D84260D121C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lyoko.ComerNet.Domain.Interface", "Lyoko.ComerNet.Domain.Interface\Lyoko.ComerNet.Domain.Interface.csproj", "{BC0F9C6D-394A-4C4D-814D-65E852606DC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lyoko.ComerNet.Domain.Core", "Lyoko.ComerNet.Domain.Core\Lyoko.ComerNet.Domain.Core.csproj", "{35281F31-E356-4D33-A5BF-3531A9FAB788}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lyoko.ComerNet.Application.DTO", "Lyoko.ComerNet.Application.DTO\Lyoko.ComerNet.Application.DTO.csproj", "{D423612B-942A-44CC-BE81-875B478FED42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lyoko.ComerNet.Transversal.Mapper", "Lyoko.ComerNet.Transversal.Mapper\Lyoko.ComerNet.Transversal.Mapper.csproj", "{3E00EBA9-723E-4EAF-B596-032E92786419}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lyoko.ComerNet.Application.Interface", "Lyoko.ComerNet.Application.Interface\Lyoko.ComerNet.Application.Interface.csproj", "{F5E92CBD-63FF-4D97-BA28-E3194B52D1C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lyoko.ComerNet.Application.Main", "Lyoko.ComerNet.Application.Main\Lyoko.ComerNet.Application.Main.csproj", "{BA054196-273D-4C43-99D4-F068F97FB51C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lyoko.ComerNet.Services.WebApi", "Lyoko.ComerNet.Services.WebApi\Lyoko.ComerNet.Services.WebApi.csproj", "{F0265CCE-BF0C-43E9-BAF3-AE0544C7A228}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication2", "WebApplication2\WebApplication2.csproj", "{B34A6915-086B-40E2-AB72-BE44E72C8FF1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97EFA5C3-67FF-40A2-8D56-3C293896C135}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97EFA5C3-67FF-40A2-8D56-3C293896C135}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97EFA5C3-67FF-40A2-8D56-3C293896C135}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97EFA5C3-67FF-40A2-8D56-3C293896C135}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20AB50FE-9252-41DF-BC72-ADD706C3D51A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20AB50FE-9252-41DF-BC72-ADD706C3D51A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20AB50FE-9252-41DF-BC72-ADD706C3D51A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20AB50FE-9252-41DF-BC72-ADD706C3D51A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB8E73D5-10F6-4C70-9ED1-6DECBBAB78DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB8E73D5-10F6-4C70-9ED1-6DECBBAB78DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB8E73D5-10F6-4C70-9ED1-6DECBBAB78DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB8E73D5-10F6-4C70-9ED1-6DECBBAB78DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAFBCB12-06F9-437F-8F00-0C858E3BBB5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAFBCB12-06F9-437F-8F00-0C858E3BBB5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAFBCB12-06F9-437F-8F00-0C858E3BBB5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAFBCB12-06F9-437F-8F00-0C858E3BBB5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FD04973-A1CD-4DC9-8393-2D84260D121C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FD04973-A1CD-4DC9-8393-2D84260D121C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FD04973-A1CD-4DC9-8393-2D84260D121C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FD04973-A1CD-4DC9-8393-2D84260D121C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC0F9C6D-394A-4C4D-814D-65E852606DC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC0F9C6D-394A-4C4D-814D-65E852606DC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC0F9C6D-394A-4C4D-814D-65E852606DC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC0F9C6D-394A-4C4D-814D-65E852606DC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35281F31-E356-4D33-A5BF-3531A9FAB788}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35281F31-E356-4D33-A5BF-3531A9FAB788}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35281F31-E356-4D33-A5BF-3531A9FAB788}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35281F31-E356-4D33-A5BF-3531A9FAB788}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D423612B-942A-44CC-BE81-875B478FED42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D423612B-942A-44CC-BE81-875B478FED42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D423612B-942A-44CC-BE81-875B478FED42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D423612B-942A-44CC-BE81-875B478FED42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E00EBA9-723E-4EAF-B596-032E92786419}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E00EBA9-723E-4EAF-B596-032E92786419}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E00EBA9-723E-4EAF-B596-032E92786419}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E00EBA9-723E-4EAF-B596-032E92786419}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5E92CBD-63FF-4D97-BA28-E3194B52D1C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5E92CBD-63FF-4D97-BA28-E3194B52D1C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5E92CBD-63FF-4D97-BA28-E3194B52D1C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5E92CBD-63FF-4D97-BA28-E3194B52D1C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA054196-273D-4C43-99D4-F068F97FB51C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA054196-273D-4C43-99D4-F068F97FB51C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA054196-273D-4C43-99D4-F068F97FB51C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA054196-273D-4C43-99D4-F068F97FB51C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0265CCE-BF0C-43E9-BAF3-AE0544C7A228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0265CCE-BF0C-43E9-BAF3-AE0544C7A228}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0265CCE-BF0C-43E9-BAF3-AE0544C7A228}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0265CCE-BF0C-43E9-BAF3-AE0544C7A228}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B34A6915-086B-40E2-AB72-BE44E72C8FF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B34A6915-086B-40E2-AB72-BE44E72C8FF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B34A6915-086B-40E2-AB72-BE44E72C8FF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B34A6915-086B-40E2-AB72-BE44E72C8FF1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{97EFA5C3-67FF-40A2-8D56-3C293896C135} = {4656032F-FB67-45DD-85D5-C9136339F330}
+		{20AB50FE-9252-41DF-BC72-ADD706C3D51A} = {6B4F73E6-1801-421F-9EBE-C9BE1B7A48FE}
+		{EB8E73D5-10F6-4C70-9ED1-6DECBBAB78DB} = {6B4F73E6-1801-421F-9EBE-C9BE1B7A48FE}
+		{DAFBCB12-06F9-437F-8F00-0C858E3BBB5C} = {29F31DB8-9AAB-4B4A-983F-65B75345E9DA}
+		{2FD04973-A1CD-4DC9-8393-2D84260D121C} = {6B4F73E6-1801-421F-9EBE-C9BE1B7A48FE}
+		{BC0F9C6D-394A-4C4D-814D-65E852606DC3} = {29F31DB8-9AAB-4B4A-983F-65B75345E9DA}
+		{35281F31-E356-4D33-A5BF-3531A9FAB788} = {29F31DB8-9AAB-4B4A-983F-65B75345E9DA}
+		{D423612B-942A-44CC-BE81-875B478FED42} = {11C3E5A5-8455-46C9-8A9F-C293B9F18D1F}
+		{3E00EBA9-723E-4EAF-B596-032E92786419} = {4656032F-FB67-45DD-85D5-C9136339F330}
+		{F5E92CBD-63FF-4D97-BA28-E3194B52D1C3} = {11C3E5A5-8455-46C9-8A9F-C293B9F18D1F}
+		{BA054196-273D-4C43-99D4-F068F97FB51C} = {11C3E5A5-8455-46C9-8A9F-C293B9F18D1F}
+		{F0265CCE-BF0C-43E9-BAF3-AE0544C7A228} = {5B9BB56E-94CC-4672-97E2-E2B3E019D656}
+		{B34A6915-086B-40E2-AB72-BE44E72C8FF1} = {5B9BB56E-94CC-4672-97E2-E2B3E019D656}
+	EndGlobalSection
+EndGlobal

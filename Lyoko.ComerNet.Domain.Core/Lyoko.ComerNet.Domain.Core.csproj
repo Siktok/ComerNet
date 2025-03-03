@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lyoko.ComerNet.Domain.Entity\Lyoko.ComerNet.Domain.Entity.csproj" />
+    <ProjectReference Include="..\Lyoko.ComerNet.Domain.Interface\Lyoko.ComerNet.Domain.Interface.csproj" />
+    <ProjectReference Include="..\Lyoko.ComerNet.Infrastructure.Interface\Lyoko.ComerNet.Infrastructure.Interface.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="14.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lyoko.ComerNet.Application.DTO\Lyoko.ComerNet.Application.DTO.csproj" />
+    <ProjectReference Include="..\Lyoko.ComerNet.Application.Interface\Lyoko.ComerNet.Application.Interface.csproj" />
+    <ProjectReference Include="..\Lyoko.ComerNet.Domain.Entity\Lyoko.ComerNet.Domain.Entity.csproj" />
+    <ProjectReference Include="..\Lyoko.ComerNet.Domain.Interface\Lyoko.ComerNet.Domain.Interface.csproj" />
+    <ProjectReference Include="..\Lyoko.ComerNet.Transversal.Common\Lyoko.ComerNet.Transversal.Common.csproj" />
+  </ItemGroup>
+
+</Project>
