@@ -4,18 +4,24 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="14.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.14" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.6.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Lyoko.ComerNet.Application.DTO\Lyoko.ComerNet.Application.DTO.csproj" />
     <ProjectReference Include="..\Lyoko.ComerNet.Application.Interface\Lyoko.ComerNet.Application.Interface.csproj" />
     <ProjectReference Include="..\Lyoko.ComerNet.Application.Main\Lyoko.ComerNet.Application.Main.csproj" />
+    <ProjectReference Include="..\Lyoko.ComerNet.Application.Validator\Lyoko.ComerNet.Application.Validator.csproj" />
     <ProjectReference Include="..\Lyoko.ComerNet.Domain.Core\Lyoko.ComerNet.Domain.Core.csproj" />
     <ProjectReference Include="..\Lyoko.ComerNet.Domain.Entity\Lyoko.ComerNet.Domain.Entity.csproj" />
     <ProjectReference Include="..\Lyoko.ComerNet.Domain.Interface\Lyoko.ComerNet.Domain.Interface.csproj" />
@@ -23,6 +29,7 @@
     <ProjectReference Include="..\Lyoko.ComerNet.Infrastructure.Interface\Lyoko.ComerNet.Infrastructure.Interface.csproj" />
     <ProjectReference Include="..\Lyoko.ComerNet.Infrastructure.Repository\Lyoko.ComerNet.Infrastructure.Repository.csproj" />
     <ProjectReference Include="..\Lyoko.ComerNet.Transversal.Common\Lyoko.ComerNet.Transversal.Common.csproj" />
+    <ProjectReference Include="..\Lyoko.ComerNet.Transversal.Logging\Lyoko.ComerNet.Transversal.Logging.csproj" />
     <ProjectReference Include="..\Lyoko.ComerNet.Transversal.Mapper\Lyoko.ComerNet.Transversal.Mapper.csproj" />
   </ItemGroup>
 

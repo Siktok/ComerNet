@@ -9,59 +9,62 @@ using Lyoko.ComerNet.Domain.Core;
 using Lyoko.ComerNet.Infrastructure.Interface;
 using Lyoko.ComerNet.Infrastructure.Repository;
 using Microsoft.OpenApi.Models;
-
+using Lyoko.ComerNet.Services.WebApi.Helper;
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using Lyoko.ComerNet.Transversal.Logging;
+using System.Runtime.CompilerServices;
+using Lyoko.ComerNet.Services.WebApi.Modules;
+using Lyoko.ComerNet.Application.Validator;
+using FluentValidation;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-//builder.Services.AddSwaggerGen();
-builder.Services.AddSwaggerGen(c =>
-{
-    c.SwaggerDoc("v1", new OpenApiInfo
-    { 
-        Title = "ComerNet Services API",
-        Version = "v1",
-        Description = "WebApi de estudio",
-        Contact = new OpenApiContact
-        {
-            Name = "Azael Llanos",
-            Email = "azael1992sp@gmail.com",
-            Url =  new Uri("https://www.linkedin.com/in/azael-llanos-gonzalez/")
-            
-        }
-     
-    });
-});
-builder.Services.AddAutoMapper(x => x.AddProfile(new MappingsProfile()));
-builder.Services.AddControllersWithViews().AddJsonOptions(options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
 
-//(net<6)builder.Services.AddMvc().AddJsonOptions(Options => { Options.JsonSerializerOptions = Newtonsoft.Json.Serialization.DefaulContractResolver(); })
+builder.Services.AddSwaggerRefact();
+
+builder.Services.AddMapperRefact();
+
+builder.Services.AddFeaturesRefact(builder.Configuration);
+
 builder.Services.AddMvc().AddJsonOptions(options =>
  {
-    
-     options.JsonSerializerOptions.PropertyNamingPolicy = null;  //para que no cambie los nombres de las propiedades a camelCase
+     options.JsonSerializerOptions.PropertyNamingPolicy = null;  //no cambia los nombres de las propiedades a camelCase
      options.JsonSerializerOptions.DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull;  // Ignorar valores nulos
  });
-//Inyección de dependencias aplicacion
-//(net<6)builder.Services.AddSingleton<IConfiguration, ConnectionFactory>();
-builder.Services.AddSingleton<IConnectionFactory, ConnectionFactory>();
-builder.Services.AddScoped<ICustomersApplication, CustomersApplication>();
-builder.Services.AddScoped<ICustomersDomain, CustomersDomain>();
-builder.Services.AddScoped<ICustomersRepository, CustomersRepository>();
+
+
+builder.Services.AddInjectionRefact(builder.Configuration);
+
+builder.Services.AddAuthenticationRefact(builder.Configuration);
+builder.Services.AddValidators();
+
+
+
+
 
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
-}
+ 
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Mi api");
+    });
 
+}
+app.UseCors("policyApiComerNet");
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

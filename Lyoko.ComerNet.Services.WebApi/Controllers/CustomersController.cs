@@ -2,23 +2,36 @@
 using Microsoft.AspNetCore.Mvc;
 using Lyoko.ComerNet.Application.DTO;
 using Lyoko.ComerNet.Application.Interface;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Lyoko.ComerNet.Services.WebApi.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    /// <summary>
+    /// Controlador para gestionar las operaciones de clientes.
+    /// </summary>
+    [Authorize]
+    [Route("api/[controller]")]
     [ApiController]
     public class CustomersController : Controller
     {
-
         private readonly ICustomersApplication _customersApplication;
 
+        /// <summary>
+        /// Inicializa una nueva instancia de la clase <see cref="CustomersController"/>.
+        /// </summary>
+        /// <param name="customersApplication">La aplicación de clientes.</param>
         public CustomersController(ICustomersApplication customersApplication)
         {
             _customersApplication = customersApplication;
         }
 
         #region metodos sincronos
-        [HttpPost]
+        /// <summary>
+        /// Inserta un nuevo cliente.
+        /// </summary>
+        /// <param name="customerDTO">El cliente a insertar.</param>
+        /// <returns>El resultado de la operación.</returns>
+        [HttpPost("Insert")]
         public IActionResult Insert([FromBody] CustomersDTO customerDTO)
         {
             if (customerDTO == null)
@@ -32,9 +45,14 @@ namespace Lyoko.ComerNet.Services.WebApi.Controllers
                 return Ok(response);
             }
             return BadRequest(response.Message);
-
         }
-        [HttpPut]
+
+        /// <summary>
+        /// Actualiza un cliente existente.
+        /// </summary>
+        /// <param name="customerDTO">El cliente a actualizar.</param>
+        /// <returns>El resultado de la operación.</returns>
+        [HttpPut("Update")]
         public IActionResult Update([FromBody] CustomersDTO customerDTO)
         {
             if (customerDTO == null)
@@ -50,8 +68,13 @@ namespace Lyoko.ComerNet.Services.WebApi.Controllers
             return BadRequest(response.Message);
         }
 
-        [HttpDelete("{customresId}")]
-        public IActionResult Delete(String customresId)
+        /// <summary>
+        /// Elimina un cliente por su ID.
+        /// </summary>
+        /// <param name="customresId">El ID del cliente a eliminar.</param>
+        /// <returns>El resultado de la operación.</returns>
+        [HttpDelete("Delete/{customresId}")]
+        public IActionResult Delete(string customresId)
         {
             if (string.IsNullOrEmpty(customresId))
             {
@@ -66,8 +89,13 @@ namespace Lyoko.ComerNet.Services.WebApi.Controllers
             return BadRequest(response.Message);
         }
 
-        [HttpGet("{customresId}")]
-        public IActionResult Get(String customresId)
+        /// <summary>
+        /// Obtiene un cliente por su ID.
+        /// </summary>
+        /// <param name="customresId">El ID del cliente a obtener.</param>
+        /// <returns>El resultado de la operación.</returns>
+        [HttpGet("Get/{customresId}")]
+        public IActionResult Get(string customresId)
         {
             if (string.IsNullOrEmpty(customresId))
             {
@@ -82,10 +110,13 @@ namespace Lyoko.ComerNet.Services.WebApi.Controllers
             return BadRequest(response.Message);
         }
 
-        [HttpGet]
+        /// <summary>
+        /// Obtiene todos los clientes.
+        /// </summary>
+        /// <returns>El resultado de la operación.</returns>
+        [HttpGet("GetAll")]
         public IActionResult GetAll()
         {
-           
             var response = _customersApplication.GetAll();
 
             if (response.IsSucess)
@@ -96,9 +127,13 @@ namespace Lyoko.ComerNet.Services.WebApi.Controllers
         }
         #endregion
 
-
         #region metodos Asincronos
-        [HttpPost("/api/[controller]/[action]Async")]
+        /// <summary>
+        /// Inserta un nuevo cliente de forma asincrónica.
+        /// </summary>
+        /// <param name="customerDTO">El cliente a insertar.</param>
+        /// <returns>El resultado de la operación.</returns>
+        [HttpPost("InsertAsync")]
         public async Task<IActionResult> InsertAsync([FromBody] CustomersDTO customerDTO)
         {
             if (customerDTO == null)
@@ -114,7 +149,12 @@ namespace Lyoko.ComerNet.Services.WebApi.Controllers
             return BadRequest(response.Message);
         }
 
-        [HttpPut("/api/[controller]/[action]Async")]
+        /// <summary>
+        /// Actualiza un cliente existente de forma asincrónica.
+        /// </summary>
+        /// <param name="customerDTO">El cliente a actualizar.</param>
+        /// <returns>El resultado de la operación.</returns>
+        [HttpPut("UpdateAsync")]
         public async Task<IActionResult> UpdateAsync([FromBody] CustomersDTO customerDTO)
         {
             if (customerDTO == null)
@@ -130,8 +170,13 @@ namespace Lyoko.ComerNet.Services.WebApi.Controllers
             return BadRequest(response.Message);
         }
 
-        [HttpDelete("/api/[controller]/[action]Async/{customresId}")]
-        public async Task<IActionResult> DeleteAsync(String customresId)
+        /// <summary>
+        /// Elimina un cliente por su ID de forma asincrónica.
+        /// </summary>
+        /// <param name="customresId">El ID del cliente a eliminar.</param>
+        /// <returns>El resultado de la operación.</returns>
+        [HttpDelete("DeleteAsync/{customresId}")]
+        public async Task<IActionResult> DeleteAsync(string customresId)
         {
             if (string.IsNullOrEmpty(customresId))
             {
@@ -146,8 +191,13 @@ namespace Lyoko.ComerNet.Services.WebApi.Controllers
             return BadRequest(response.Message);
         }
 
-        [HttpGet("/api/[controller]/[action]Async/{customresId}")]
-        public async Task<IActionResult> GetAsync(String customresId)
+        /// <summary>
+        /// Obtiene un cliente por su ID de forma asincrónica.
+        /// </summary>
+        /// <param name="customresId">El ID del cliente a obtener.</param>
+        /// <returns>El resultado de la operación.</returns>
+        [HttpGet("GetAsync/{customresId}")]
+        public async Task<IActionResult> GetAsync(string customresId)
         {
             if (string.IsNullOrEmpty(customresId))
             {
@@ -162,10 +212,13 @@ namespace Lyoko.ComerNet.Services.WebApi.Controllers
             return BadRequest(response.Message);
         }
 
-        [HttpGet("/api/[controller]/[action]Async")]
+        /// <summary>
+        /// Obtiene todos los clientes de forma asincrónica.
+        /// </summary>
+        /// <returns>El resultado de la operación.</returns>
+        [HttpGet("GetAllAsync")]
         public async Task<IActionResult> GetAllAsync()
         {
-
             var response = await _customersApplication.GetAllAsync();
 
             if (response.IsSucess)
@@ -175,6 +228,5 @@ namespace Lyoko.ComerNet.Services.WebApi.Controllers
             return BadRequest(response.Message);
         }
         #endregion
-
     }
 }

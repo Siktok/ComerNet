@@ -11,6 +11,7 @@ namespace Lyoko.ComerNet.Transversal.Mapper
         {
             //Origen y destino iguales
             CreateMap<Customers, CustomersDTO>().ReverseMap();
+            CreateMap<Users, UsersDTO>().ReverseMap();
 
             //Origen y destino diferentes
             //CreateMap<Customers, CustomersDTO>().ReverseMap()
