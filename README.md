@@ -21,3 +21,4 @@ Implementa características como:
 - Micro-ORM: Dapper.
 - Habilitación de solicitudes de origen cruzado (CORS).
 - Autenticación con JWT.
+- Implementación pruebas con MS Test
