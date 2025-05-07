@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Lyoko.ComerNet.Application.DTO\Lyoko.ComerNet.Application.DTO.csproj" />
     <ProjectReference Include="..\Lyoko.ComerNet.Application.Interface\Lyoko.ComerNet.Application.Interface.csproj" />
+    <ProjectReference Include="..\Lyoko.ComerNet.Application.Validator\Lyoko.ComerNet.Application.Validator.csproj" />
     <ProjectReference Include="..\Lyoko.ComerNet.Domain.Entity\Lyoko.ComerNet.Domain.Entity.csproj" />
     <ProjectReference Include="..\Lyoko.ComerNet.Domain.Interface\Lyoko.ComerNet.Domain.Interface.csproj" />
     <ProjectReference Include="..\Lyoko.ComerNet.Transversal.Common\Lyoko.ComerNet.Transversal.Common.csproj" />

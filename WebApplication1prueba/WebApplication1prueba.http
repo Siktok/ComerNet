@@ -1,6 +1,0 @@
-@WebApplication1prueba_HostAddress = http://localhost:5127
-
-GET {{WebApplication1prueba_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
