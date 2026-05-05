@@ -2,7 +2,7 @@
 
 > Aplicación web en .NET con un patrón de diseño domain-driven design. [Ver en GitHub](https://github.com/Siktok/ComerNet)
 > 
-![Badge de estado](https://img.shields.io/badge/estado-en%20desarrollo-yellow)
+![Badge de estado](https://img.shields.io/badge/estado-en%20acabado-green)
 
 ## 📋 Descripción
 
